@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-06-03T15:49:16 IST" name="Suite" finished-at="2025-06-03T15:49:32 IST" duration-ms="16043">
+    <groups>
+    </groups>
+    <test started-at="2025-06-03T15:49:16 IST" name="Test" finished-at="2025-06-03T15:49:32 IST" duration-ms="16043">
+      <class name="com.jenkinsPractice.testcases.TC01_HomePageTest">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:com.jenkinsPractice.testcases.TC01_HomePageTest@126253fd]" started-at="2025-06-03T15:49:16 IST" name="beforeSuite" finished-at="2025-06-03T15:49:16 IST" duration-ms="353" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method is-config="true" signature="setValues()[pri:0, instance:com.jenkinsPractice.testcases.TC01_HomePageTest@126253fd]" started-at="2025-06-03T15:49:16 IST" name="setValues" finished-at="2025-06-03T15:49:16 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setValues -->
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:com.jenkinsPractice.testcases.TC01_HomePageTest@126253fd]" started-at="2025-06-03T15:49:16 IST" name="beforeClass" finished-at="2025-06-03T15:49:16 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.jenkinsPractice.testcases.TC01_HomePageTest@126253fd]" started-at="2025-06-03T15:49:17 IST" name="beforeMethod" finished-at="2025-06-03T15:49:27 IST" duration-ms="9928" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="jenkinsTest(java.lang.String)[pri:0, instance:com.jenkinsPractice.testcases.TC01_HomePageTest@126253fd]" started-at="2025-06-03T15:49:27 IST" name="jenkinsTest" data-provider="fetchData" finished-at="2025-06-03T15:49:27 IST" duration-ms="193" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Practice Page]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- jenkinsTest -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.jenkinsPractice.testcases.TC01_HomePageTest@126253fd]" started-at="2025-06-03T15:49:27 IST" name="afterMethod" finished-at="2025-06-03T15:49:28 IST" duration-ms="658" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.jenkinsPractice.testcases.TC01_HomePageTest@126253fd]" started-at="2025-06-03T15:49:28 IST" name="afterClass" finished-at="2025-06-03T15:49:28 IST" duration-ms="16" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.jenkinsPractice.testcases.TC01_HomePageTest@126253fd]" started-at="2025-06-03T15:49:32 IST" name="afterTest" finished-at="2025-06-03T15:49:32 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:com.jenkinsPractice.testcases.TC01_HomePageTest@126253fd]" started-at="2025-06-03T15:49:32 IST" name="afterSuite" finished-at="2025-06-03T15:49:32 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- com.jenkinsPractice.testcases.TC01_HomePageTest -->
+      <class name="com.jenkinsPractice.testcases.TC02_HomePageTest">
+        <test-method is-config="true" signature="setValues()[pri:0, instance:com.jenkinsPractice.testcases.TC02_HomePageTest@7fb4f2a9]" started-at="2025-06-03T15:49:16 IST" name="setValues" finished-at="2025-06-03T15:49:16 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setValues -->
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:com.jenkinsPractice.testcases.TC02_HomePageTest@7fb4f2a9]" started-at="2025-06-03T15:49:28 IST" name="beforeClass" finished-at="2025-06-03T15:49:28 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.jenkinsPractice.testcases.TC02_HomePageTest@7fb4f2a9]" started-at="2025-06-03T15:49:28 IST" name="beforeMethod" finished-at="2025-06-03T15:49:31 IST" duration-ms="3432" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="jenkinsTest(java.lang.String)[pri:0, instance:com.jenkinsPractice.testcases.TC02_HomePageTest@7fb4f2a9]" started-at="2025-06-03T15:49:31 IST" name="jenkinsTest" data-provider="fetchData" finished-at="2025-06-03T15:49:32 IST" duration-ms="933" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Practice Page]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- jenkinsTest -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.jenkinsPractice.testcases.TC02_HomePageTest@7fb4f2a9]" started-at="2025-06-03T15:49:32 IST" name="afterMethod" finished-at="2025-06-03T15:49:32 IST" duration-ms="199" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.jenkinsPractice.testcases.TC02_HomePageTest@7fb4f2a9]" started-at="2025-06-03T15:49:32 IST" name="afterClass" finished-at="2025-06-03T15:49:32 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- com.jenkinsPractice.testcases.TC02_HomePageTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

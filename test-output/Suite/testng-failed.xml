@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="5" name="Failed suite [Suite]" parallel="classes">
+  <test thread-count="5" verbose="5" name="Test(failed)" parallel="classes">
+    <classes>
+      <class name="com.rashtriya.testcases.TC004_RashtriyaFeesSubmision">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="beforeClass"/>
+          <include name="afterSuite"/>
+          <include name="adminLoginCheck" invocation-numbers="0"/>
+          <include name="afterMethod"/>
+          <include name="beforeSuite"/>
+          <include name="setValues"/>
+          <include name="afterClass"/>
+        </methods>
+      </class> <!-- com.rashtriya.testcases.TC004_RashtriyaFeesSubmision -->
+      <class name="com.rashtriya.testcases.TC001_RashtriyaFeesSubmision">
+        <methods>
+          <include name="setValues"/>
+          <include name="adminLoginCheck" invocation-numbers="0"/>
+          <include name="beforeMethod"/>
+          <include name="beforeClass"/>
+          <include name="afterSuite"/>
+          <include name="afterMethod"/>
+          <include name="beforeSuite"/>
+          <include name="afterClass"/>
+        </methods>
+      </class> <!-- com.rashtriya.testcases.TC001_RashtriyaFeesSubmision -->
+      <class name="com.rashtriya.testcases.TC003_RashtriyaFeesSubmision">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="beforeClass"/>
+          <include name="afterSuite"/>
+          <include name="afterMethod"/>
+          <include name="adminLoginCheck" invocation-numbers="0"/>
+          <include name="beforeSuite"/>
+          <include name="afterClass"/>
+          <include name="setValues"/>
+        </methods>
+      </class> <!-- com.rashtriya.testcases.TC003_RashtriyaFeesSubmision -->
+      <class name="com.rashtriya.testcases.TC005_RashtriyaFeesSubmision">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="adminLoginCheck" invocation-numbers="0"/>
+          <include name="setValues"/>
+          <include name="beforeClass"/>
+          <include name="afterSuite"/>
+          <include name="afterMethod"/>
+          <include name="beforeSuite"/>
+          <include name="afterClass"/>
+        </methods>
+      </class> <!-- com.rashtriya.testcases.TC005_RashtriyaFeesSubmision -->
+      <class name="com.rashtriya.testcases.TC002_RashtriyaFeesSubmision">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="beforeClass"/>
+          <include name="afterSuite"/>
+          <include name="afterMethod"/>
+          <include name="adminLoginCheck" invocation-numbers="0"/>
+          <include name="setValues"/>
+          <include name="beforeSuite"/>
+          <include name="afterClass"/>
+        </methods>
+      </class> <!-- com.rashtriya.testcases.TC002_RashtriyaFeesSubmision -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
