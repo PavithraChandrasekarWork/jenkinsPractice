@@ -18,7 +18,7 @@ public class DataInputProvider{
 			FileInputStream fis = null;
 			if(new WebDriverServiceImpl().environment.equals("local")) {
 				fis = new FileInputStream("./src/test/java/data/"+dataSheetName+".xlsx");
-			}else if(new WebDriverServiceImpl().environment.equals("local")) {
+			}else if(new WebDriverServiceImpl().environment.equals("jenkins")) {
 				fis = new FileInputStream("./src/test/java/data/"+dataSheetName+".xlsx");
 			} else {
 				fis = new FileInputStream("classes//data//"+dataSheetName+".xlsx");	
