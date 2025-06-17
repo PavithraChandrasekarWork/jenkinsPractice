@@ -3,7 +3,7 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.livewire.testcases.TC01_HomePageTest">
+      <class name="com.jenkinsPractice.testcases.TC02_HomePageTest">
         <methods>
           <include name="beforeMethod"/>
           <include name="beforeClass"/>
@@ -15,7 +15,7 @@
           <include name="beforeSuite"/>
           <include name="afterClass"/>
         </methods>
-      </class> <!-- com.livewire.testcases.TC01_HomePageTest -->
+      </class> <!-- com.jenkinsPractice.testcases.TC02_HomePageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
