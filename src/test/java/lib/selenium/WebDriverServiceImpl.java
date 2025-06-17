@@ -83,10 +83,10 @@ public class WebDriverServiceImpl extends HTMLReporter implements WebDriverServi
 		try {
 			if (environment.equals("local")) {
 				prop.load(new FileInputStream(
-						new File(System.getProperty("user.dir") + "./src/main/resources/locators.properties")));
+						new File(System.getProperty("user.dir") + "./src/test/resources/locators.properties")));
 			} else if (environment.equals("jenkins")) {
 				prop.load(new FileInputStream(
-						new File(System.getProperty("user.dir") + "/src/main/resources/locators.properties")));
+						new File(System.getProperty("user.dir") + "/src/test/resources/locators.properties")));
 				
 			}
 			else {
@@ -163,9 +163,9 @@ public class WebDriverServiceImpl extends HTMLReporter implements WebDriverServi
 	public void downloadFile() {
 		String fileDownloadPath;
 		if (environment.equals("local")) {
-			fileDownloadPath = System.getProperty("user.dir") + "\\src\\main\\java\\downloadFiles";
+			fileDownloadPath = System.getProperty("user.dir") + "\\src\\test\\java\\downloadFiles";
 		} else if(environment.equals("jenkins")){
-			fileDownloadPath = Paths.get(System.getProperty("user.dir"), "src", "main", "java", "downloadFiles").toString();
+			fileDownloadPath = Paths.get(System.getProperty("user.dir"), "src", "test", "java", "downloadFiles").toString();
 		}else {
 			fileDownloadPath = "classes//downloadFiles";
 		}
