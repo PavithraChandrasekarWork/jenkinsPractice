@@ -117,38 +117,29 @@ public class WebDriverServiceImpl extends HTMLReporter implements WebDriverServi
 				
 			} else if(environment.equals("jenkins")) {
 				if (browser.equalsIgnoreCase("chrome")) {
-					String chromeDriverPath = System.getenv("CHROME_DRIVER_PATH");
-					
-					if (chromeDriverPath == null || chromeDriverPath.isEmpty()) {
-					    throw new RuntimeException("CHROME_DRIVER_PATH not set in Jenkins environment.");
-					}else {
-						System.setProperty("webdriver.chrome.driver", chromeDriverPath);
-						ChromeOptions op = new ChromeOptions();
-//						op.addArguments("disable-infobars");
-						downloadFile();
-						driver = new ChromeDriver(options);
-					}
-					
+					System.out.println("inside start app chrome Linux");
+					System.setProperty("webdriver.chrome.driver", "/driver/chromedriverLinux.exe");
+					ChromeOptions op = new ChromeOptions();
+//					op.addArguments("disable-infobars");
+					downloadFile();
+					driver = new ChromeDriver(options);
 				} else if (browser.equalsIgnoreCase("firefox")) {
-					String geckoDriverPath = System.getenv("GECKO_DRIVER_PATH");
+					System.setProperty("webdriver.gecko.driver", "/driver/geckodriverLinux.exe");
+					driver = new FirefoxDriver();
+				}
 					
-					if (geckoDriverPath == null || geckoDriverPath.isEmpty()) {
-					    throw new RuntimeException("GECKO_DRIVER_PATH not set in Jenkins environment.");
-					}else {
-						System.setProperty("webdriver.gecko.driver", geckoDriverPath);
-						driver = new FirefoxDriver();
-					}
+				}
+				else {
+					FirefoxBinary firefoxBinary = new FirefoxBinary();
+					firefoxBinary.addCommandLineOptions("--headless");
+					System.setProperty("webdriver.firefox.driver", "./driver/firefoxdriver.exe");
+					FirefoxOptions firefoxOptions = new FirefoxOptions();
+					firefoxOptions.setCapability(CapabilityType.SUPPORTS_JAVASCRIPT, false);
+					firefoxOptions.setBinary(firefoxBinary);
+					driver = new FirefoxDriver(firefoxOptions);
 				}		
-			}
-			else {
-				FirefoxBinary firefoxBinary = new FirefoxBinary();
-				firefoxBinary.addCommandLineOptions("--headless");
-				System.setProperty("webdriver.firefox.driver", "./driver/firefoxdriver.exe");
-				FirefoxOptions firefoxOptions = new FirefoxOptions();
-				firefoxOptions.setCapability(CapabilityType.SUPPORTS_JAVASCRIPT, false);
-				firefoxOptions.setBinary(firefoxBinary);
-				driver = new FirefoxDriver(firefoxOptions);
-			}
+			
+			
 			
 			driver.manage().window().maximize();
 			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
