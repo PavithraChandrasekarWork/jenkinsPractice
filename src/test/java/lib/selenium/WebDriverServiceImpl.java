@@ -118,13 +118,13 @@ public class WebDriverServiceImpl extends HTMLReporter implements WebDriverServi
 			} else if(environment.equals("jenkins")) {
 				if (browser.equalsIgnoreCase("chrome")) {
 					System.out.println("inside start app chrome Linux");
-					System.setProperty("webdriver.chrome.driver", "/driver/chromedriverLinux.exe");
+					System.setProperty("webdriver.chrome.driver", "/driver/chromedriverLinux");
 					ChromeOptions op = new ChromeOptions();
 //					op.addArguments("disable-infobars");
 					downloadFile();
 					driver = new ChromeDriver(options);
 				} else if (browser.equalsIgnoreCase("firefox")) {
-					System.setProperty("webdriver.gecko.driver", "/driver/geckodriverLinux.exe");
+					System.setProperty("webdriver.gecko.driver", "/driver/geckodriverLinux");
 					driver = new FirefoxDriver();
 				}
 					
