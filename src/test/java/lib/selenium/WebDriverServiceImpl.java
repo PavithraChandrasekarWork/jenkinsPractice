@@ -118,14 +118,21 @@ public class WebDriverServiceImpl extends HTMLReporter implements WebDriverServi
 				
 			} else if(environment.equals("jenkins")) {
 				if (browser.equalsIgnoreCase("chrome")) {
-					System.out.println("inside start app chrome Linux");
-					System.out.println(System.getProperty("user.dir") + "/driver/chromedriverLinux");
-					System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/driver/chromedriverLinux");
+//					System.out.println("inside start app chrome Linux");
+//					System.out.println(System.getProperty("user.dir") + "/driver/chromedriverLinux");
+//					System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/driver/chromedriverLinux");
+//					
+//					ChromeOptions op = new ChromeOptions();
+////					op.addArguments("disable-infobars");
+//					downloadFile();
+//					driver = new ChromeDriver(options);
 					
-					ChromeOptions op = new ChromeOptions();
-//					op.addArguments("disable-infobars");
-					downloadFile();
-					driver = new ChromeDriver(options);
+					String chromeDriverPath = System.getenv("CHROME_DRIVER_PATH");
+					if (chromeDriverPath == null || chromeDriverPath.isEmpty()) {
+					    chromeDriverPath =  System.getProperty("user.dir") + "/driver/chromedriverLinux"; // fallback for local dev
+					}
+					System.setProperty("webdriver.chrome.driver", chromeDriverPath);
+					
 				} else if (browser.equalsIgnoreCase("firefox")) {
 					System.out.println(System.getProperty("user.dir") +  "/driver/geckodriverLinux");
 					System.setProperty("webdriver.gecko.driver",System.getProperty("user.dir") +  "/driver/geckodriverLinux");
