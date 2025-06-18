@@ -75,6 +75,7 @@ public class WebDriverServiceImpl extends HTMLReporter implements WebDriverServi
 	public Properties prop;
 
 	public String environment = System.getenv("TEST_ENV") != null ? System.getenv("TEST_ENV") : "local";
+	//public String environment ="jenkins";
 	//public String environment = "local";
 	// public String environment = "AWS";
 
@@ -118,13 +119,16 @@ public class WebDriverServiceImpl extends HTMLReporter implements WebDriverServi
 			} else if(environment.equals("jenkins")) {
 				if (browser.equalsIgnoreCase("chrome")) {
 					System.out.println("inside start app chrome Linux");
-					System.setProperty("webdriver.chrome.driver", "/driver/chromedriverLinux");
+					System.out.println(System.getProperty("user.dir") + "/driver/chromedriverLinux");
+					System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/driver/chromedriverLinux");
+					
 					ChromeOptions op = new ChromeOptions();
 //					op.addArguments("disable-infobars");
 					downloadFile();
 					driver = new ChromeDriver(options);
 				} else if (browser.equalsIgnoreCase("firefox")) {
-					System.setProperty("webdriver.gecko.driver", "/driver/geckodriverLinux");
+					System.out.println(System.getProperty("user.dir") +  "/driver/geckodriverLinux");
+					System.setProperty("webdriver.gecko.driver",System.getProperty("user.dir") +  "/driver/geckodriverLinux");
 					driver = new FirefoxDriver();
 				}
 					
