@@ -135,7 +135,6 @@ public class WebDriverServiceImpl extends HTMLReporter implements WebDriverServi
 					    chromeDriverPath =  System.getProperty("user.dir") + "/driver/chromedriverLinux"; // fallback for local dev
 					}
 					System.setProperty("webdriver.chrome.driver", chromeDriverPath);
-					driver = new ChromeDriver(options);
 					
 					options = new ChromeOptions();
 					options.addArguments("--headless", "--no-sandbox", "--disable-dev-shm-usage");
