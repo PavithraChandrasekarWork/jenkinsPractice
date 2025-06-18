@@ -137,6 +137,15 @@ public class WebDriverServiceImpl extends HTMLReporter implements WebDriverServi
 					System.setProperty("webdriver.chrome.driver", chromeDriverPath);
 					driver = new ChromeDriver(options);
 					
+					options = new ChromeOptions();
+					options.addArguments("--headless", "--no-sandbox", "--disable-dev-shm-usage");
+
+					// Optional prefs setup, if you have a downloadFile() method that sets prefs
+					downloadFile(); // This modifies `this.options`
+
+					System.out.println("ChromeOptions is null? " + (options == null));
+					driver = new ChromeDriver(options);
+					
 				} else if (browser.equalsIgnoreCase("firefox")) {
 					System.out.println(System.getProperty("user.dir") +  "/driver/geckodriverLinux");
 					System.setProperty("webdriver.gecko.driver",System.getProperty("user.dir") +  "/driver/geckodriverLinux");
