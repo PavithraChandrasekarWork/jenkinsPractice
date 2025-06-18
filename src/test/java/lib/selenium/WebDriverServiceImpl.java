@@ -118,6 +118,7 @@ public class WebDriverServiceImpl extends HTMLReporter implements WebDriverServi
 				
 			} else if(environment.equals("jenkins")) {
 				if (browser.equalsIgnoreCase("chrome")) {
+					System.out.println("inside jenkins chrome setup");
 //					System.out.println("inside start app chrome Linux");
 //					System.out.println(System.getProperty("user.dir") + "/driver/chromedriverLinux");
 //					System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/driver/chromedriverLinux");
@@ -128,7 +129,9 @@ public class WebDriverServiceImpl extends HTMLReporter implements WebDriverServi
 //					driver = new ChromeDriver(options);
 					
 					String chromeDriverPath = System.getenv("CHROME_DRIVER_PATH");
+					System.out.println("chome path"+chromeDriverPath);
 					if (chromeDriverPath == null || chromeDriverPath.isEmpty()) {
+						System.out.println("driver path is empty");
 					    chromeDriverPath =  System.getProperty("user.dir") + "/driver/chromedriverLinux"; // fallback for local dev
 					}
 					System.setProperty("webdriver.chrome.driver", chromeDriverPath);
