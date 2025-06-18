@@ -23,7 +23,6 @@ public class TC01_HomePageTest extends PreAndPost {
 		@Test(dataProvider="fetchData")
 		public void jenkinsTest(String pageTitle) throws InterruptedException {
 			
-			
 			new HomePage(driver,test)
 			.validateTitleOfPage(pageTitle)
 			;

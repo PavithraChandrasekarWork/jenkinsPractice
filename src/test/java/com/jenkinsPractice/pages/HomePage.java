@@ -32,7 +32,10 @@ public class HomePage extends PreAndPost{
 
 	public HomePage checkAllRadioBtns() {
 		List<WebElement> radioBtns= locateElements("xpath", "radioBtn_xp");
+		int i=1;
 		for(WebElement rb:radioBtns) {
+			System.out.println("radio btn click"+ i);
+			i++;
 			rb.click();
 		}
 		return this;
