@@ -28,6 +28,13 @@ public abstract class HTMLReporter {
 			//html.loadXMLConfig("./src/main/java/propertiesFile/extent-config.xml")
 			extent = new ExtentReports();
 			extent.attachReporter(html); 
+		}else if(new WebDriverServiceImpl().environment.equals("jenkins")) {
+			//_"+newNumber+"
+			html = new ExtentHtmlReporter(System.getProperty("user.dir") +"/src/test/java/reports/Livewire_Report.html");
+			html.setAppendExisting(true);
+			//html.loadXMLConfig("./src/main/java/propertiesFile/extent-config.xml")
+			extent = new ExtentReports();
+			extent.attachReporter(html); 
 		} else { 
 			html = new ExtentHtmlReporter("classes//reports//sanityReport_"+newNumber+".html"); 
 			html.setAppendExisting(true);
@@ -61,6 +68,9 @@ public abstract class HTMLReporter {
 				if(new WebDriverServiceImpl().environment.equals("local")) {
 				img = MediaEntityBuilder.createScreenCaptureFromPath
 						("..\\reports\\images\\"+snapNumber+".jpg").build();
+				}else if(new WebDriverServiceImpl().environment.equals("jenkins")) {
+					img = MediaEntityBuilder.createScreenCaptureFromPath
+							(System.getProperty("user.dir") +"/src/test/java/reports/images/"+snapNumber+".jpg").build();
 				}else {
 					img = MediaEntityBuilder.createScreenCaptureFromPath
 							("..//reports//images//"+snapNumber+".jpg").build();
@@ -92,6 +102,9 @@ public abstract class HTMLReporter {
 				if(new WebDriverServiceImpl().environment.equals("local")) {
 				img = MediaEntityBuilder.createScreenCaptureFromPath
 						("..\\reports\\images\\"+snapNumber+".jpg").build();
+				}else if(new WebDriverServiceImpl().environment.equals("local")) {
+					img = MediaEntityBuilder.createScreenCaptureFromPath
+							(System.getProperty("user.dir") +"/src/test/java/reports/images/"+snapNumber+".jpg").build();
 				}else {
 					img = MediaEntityBuilder.createScreenCaptureFromPath
 							("..//reports//images//"+snapNumber+".jpg").build();
