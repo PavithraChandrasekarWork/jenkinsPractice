@@ -135,6 +135,7 @@ public class WebDriverServiceImpl extends HTMLReporter implements WebDriverServi
 					    chromeDriverPath =  System.getProperty("user.dir") + "/driver/chromedriverLinux"; // fallback for local dev
 					}
 					System.setProperty("webdriver.chrome.driver", chromeDriverPath);
+					driver = new ChromeDriver(options);
 					
 				} else if (browser.equalsIgnoreCase("firefox")) {
 					System.out.println(System.getProperty("user.dir") +  "/driver/geckodriverLinux");
